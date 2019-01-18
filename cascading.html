@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pavithra's Project: Visualizing Cascading Delays</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="aos-master/dist/aos.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="manifest" href="images/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+			
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+ 							<h1>Visualizing Cascading Delays in Flights in the US</h1>
+							 <ul class="role">
+                    			<li><b>Duration:</b> Fall 2017 - Team Project</li><br>
+                    			<li><b>Courses:</b> Data Visualization</li><br>
+                    			<li><b>Tools and Methods:</b> DataMaps and D3.js</li><br>
+                  			</ul><br>
+                  		
+                  			<p><strong>Visualizing Cascading Delays </strong> is a project in which a fellow classmate and I visualized the airplane dataset for the year 2007 to identify cities in which the cascading delays are maximum as well as cities in which the delays are minimum. Cascading Delays in other words is defined as the departure delay caused at the origin airport, thereby causing an arrival delay at a connecting airport which in turn causes an arrival delay at the destination airport. For example, a flight moving from NY to CA has connections at TX. If the flight is delayed by 60mins at NY, which causes a delay of 45mins at TX in turn causing a delay of 20mins when the flight arrives at CA is called as Cascading Delays. </p><br>
+                  		
+							<h2>Overview</h2>
+			            		<p>Our team project is based on improving kid’s education in elementary schools through interactive learning systems. Our main motivation for choosing this project is that we observed that the kids were having great difficulty focusing on learning the materials provided in class as they were not engaged or motivated enough.</p><br/>
+			            	<h2>Project Goals</h2>
+			            		<p>The airplane dataset is huge and has multiple data points which makes it challenging to visualize the important features of this data. The aim of this term project is to find effective ways of visualizing this dataset such that it could help passengers select days with least delays or could enable the airport authorities to see delay patterns and make necessary changes. Also, for someone interested in studying flights in the US, these visualizations could also help gain insights into how flying patterns of people in the US have altered over time.<br>
+                  				The dataset contains details of all the flights within the US from 1987 to 2008. Two broad categories of data points that can be looked into are delay patterns and flying patterns.</p><br/>
+                  			
+			            	 <h2>Design Process</h2>
+			            	 	<h3>Discover</h3>
+		            			<p>It is observed that cascading delays were highly frequent in the US, but there are no proper visualization methods through which the users can understand which flights to choose with minimum delay. Taking this as our problem statement, we brainstormed to identify the users and their pain points.</p><br/>
+		            			<h4>Target Audience or Users</h4>
+		            			<p>The target audience for this data visualization project are data analysts, airport and airlines crew, and flyers(passengers).</p><br/>
+		            		
+		            			<h4>User Goals</h4>
+		            			<p>To view and select flights that cause minimum delays at the connecting airport due to delays in origin airport.</p><br/>
+		            			<h4>Questions this visualization answers</h4>
+		            			<p>We focus on answering two major questions through this visualization project - </p>
+                 			 	<ul class="inline-1">
+                  				<li> Help users observe flying patterns as well as delay patterns in flights in the US</li>
+                  				<li> Is there a pattern of delays at particular airports? </li>
+                  				<li> Do delays cascade, that is do delays at one airport lead to delays at other airports? </li>
+                  				</ul><br/>
+                  			
+                  				<h3>Research</h3>
+                  				<p>To research more on how to visualize the proposed questions using the airplane dataset, we performed an extensive literature review. Different kinds of research that has already been done on visualizing multidimensional and temporal data, visualizing airplane dataset and notions of storytelling for any data visualization project were all studied.</p><br/>
+                  				<h3>Design</h3>
+                  				<p>Post our literature review, we sketched out different ways in which we can visualize flight patterns (trends in delays and flight patterns) and cascading delays.</p>
+                  				<img class="responsive" src="images/cascading/D1.png" alt=""><br/><br/>
+                  			
+                  				<h3>Develop</h3>
+                  				We initially started developing this visualization project with a dummy dataset to show animation of flight patterns across the US in the year 2007. The <a href="http://datamaps.github.io/" target="_blank">Datamaps</a> library was used to plot the US map and to display the flight patterns in the form of arcs. For instance, for a flight moving from MD (Maryland) to CA (California) , an animated arc is drawn starting from MD and ending at CA.</p>
+								<img class="responsive" src="images/cascading/alpha.png" alt=""><br/><br/>
+                  				<p>Post visualizing flight patterns in the US, we aimed to focus on visualizing cascading delays.Using a dataset for the year 2007, we visualized two levels of delays (first level being the origin airport for the initial set of delays and the second level being the delays caused in other airports due to delays in the origin airport). The origin airport is chosen by the user from a select set of ten major states. The difference between the origin and the destination points in these arcs are distinguished by using gradients. The darker shade corresponds to the origin while the lighter shade indicates the destination state. In the first level, we chose a timeframe of 5PM to 8PM to show the delays.</p>
+                  			
+                  				<img class="responsive" src="images/cascading/beta-1.png" alt=""><br/><br/>
+                  				<p>The states of flights which were delayed from the origin airports are all taken as origins for the second level and the delays they caused in the flights departing from them are visualized. An animation sequence was implemented wherein we first show the first level of delays and once that is done, we show the second level of delays(cascading delays) after that on a different map.In the second level, we chose a timeframe of 8PM to 11PM to show the cascading delays.</p>
+                  				<img class="responsive" src="images/cascading/beta-2.png" alt=""><br/><br/>
+                  				<p>We observed that the gradient mappings did not occur consistently and there were significant bugs in the visualization which were found during user testing. We incorporated all these findings in our final implementation. To give our users freedom of choosing the time frame and to observe at which timeframe the delays were maximum, we implemented a time slider and a bar chart that shows the average delays caused in the cities. The user also has the freedom to select the day of the week in which they wish to view the delay information. Once the user chooses an origin airport by clicking on a particular state(one out of the 10 major states), the two levels of delays are visualized, along with a bar chart to show average delays at a particular timeframe.The weight of each arc in the first level of delays indicates the delay minutes.Through our visualization, we help users understand flight patterns being affected due to cascading delays and find out in which states the delays are being caused maximum.</p>
+                  			
+                  				<img class="responsive" src="images/cascading/final-1.png" alt="">
+                  			
+                  				<img class="responsive" src="images/cascading/final-2.png" alt=""><br/>
+                  			
+                  			<h2>Key Takeaways</h2>
+                  			<p>Through this visualization, we were able to identify the following -
+							<ol ><li>Cities in which the delays were maximum and minimum</li>
+							<li>Average delay(in minutes)caused due to delay in origin airport.</li>
+							<li>Average delay(in minutes)at other airports caused due to delay in origin airport.</li></ol></p><br/>
+						
+							<h2>Visualization Video</h2>
+							<iframe class="responsive" src="https://www.youtube.com/embed/B068VUrUzH8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe><br><br>
+						</div>
+					</div>
+					
+				
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="aos-master/dist/aos.js"></script>
+			<script>
+				AOS.init({
+  					duration: 1200,
+				})
+			</script>
+
+	</body>
+</html>
